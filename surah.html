@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surah - Rooh-E-Iman</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>📖 Holy Quran</h1>
+
+    <h2 id="surahName">Loading...</h2>
+
+    <p id="surahArabic"></p>
+
+    <p id="surahVerses"></p>
+
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="quran.html">📖 Back to Quran</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <h2>Arabic Text</h2>
+
+    <p id="arabicText" style="font-size:28px; line-height:2;"></p>
+
+    <h2>Urdu Translation</h2>
+
+    <p id="urduTranslation"></p>
+
+</section>
+
+<!-- Load Data -->
+<script src="surahs.js"></script>
+<script src="quran-data.js"></script>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const id = Number(params.get("id"));
+
+const surah = surahs.find(s => s.id === id);
+
+if (surah) {
+
+    document.getElementById("surahName").innerText = surah.name;
+
+    document.getElementById("surahArabic").innerText = surah.arabic;
+
+    document.getElementById("surahVerses").innerText = surah.verses + " Verses";
+
+}
+
+if (typeof quranData !== "undefined" && quranData[id]) {
+
+    document.getElementById("arabicText").innerText = quranData[id].text;
+
+    document.getElementById("urduTranslation").innerText = quranData[id].translation;
+
+} else {
+
+    document.getElementById("arabicText").innerText =
+    "Arabic text will be added soon.";
+
+    document.getElementById("urduTranslation").innerText =
+    "Urdu translation will be added soon.";
+
+}
+
+</script>
+
+</body>
+
+</html>
