@@ -1,0 +1,309 @@
+/* =========================
+   Quran Hero
+========================= */
+
+.hero{
+min-height:260px;
+padding:60px 20px;
+background:linear-gradient(rgba(6,68,32,.75),rgba(6,68,32,.75)),
+url("Image/hero-bg.jpg") center/cover no-repeat;
+text-align:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.hero h2{
+color:#FFD700;
+font-size:28px;
+margin-bottom:10px;
+}
+
+.hero h1{
+color:#fff;
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#f5f5f5;
+font-size:18px;
+}
+
+/* =========================
+   Quran Search
+========================= */
+
+.search-section{
+padding:35px 20px;
+text-align:center;
+background:#062b20;
+}
+
+.search-section h2{
+color:#FFD700;
+margin-bottom:20px;
+font-size:28px;
+}
+
+#searchInput{
+width:90%;
+max-width:500px;
+padding:15px 20px;
+font-size:18px;
+border:2px solid #FFD700;
+border-radius:50px;
+outline:none;
+background:rgba(255,255,255,.12);
+color:#fff;
+backdrop-filter:blur(10px);
+transition:.3s;
+}
+
+#searchInput::placeholder{
+color:#ddd;
+}
+
+#searchInput:focus{
+border-color:#fff;
+box-shadow:0 0 15px rgba(255,215,0,.5);
+}
+
+/* =========================
+   Premium Surah Cards
+========================= */
+
+#surahList{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:25px;
+padding:40px 20px;
+background:#062b20;
+}
+
+#surahList .card{
+background:#ffffff;
+border-radius:18px;
+padding:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+transition:.3s;
+border:2px solid transparent;
+}
+
+#surahList .card:hover{
+transform:translateY(-8px);
+border-color:#FFD700;
+box-shadow:0 12px 25px rgba(255,215,0,.3);
+}
+
+#surahList .card h3{
+color:#064420;
+font-size:22px;
+margin-bottom:12px;
+}
+
+#surahList .card p{
+color:#555;
+font-size:16px;
+margin:6px 0;
+}
+
+#surahList .card a{
+display:inline-block;
+margin-top:15px;
+padding:10px 22px;
+background:#064420;
+color:#FFD700;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
+
+#surahList .card a:hover{
+background:#FFD700;
+color:#064420;
+}
+
+.card-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.surah-number{
+background:#FFD700;
+color:#064420;
+padding:6px 12px;
+border-radius:20px;
+font-weight:bold;
+}
+
+.surah-type{
+background:#064420;
+color:#fff;
+padding:6px 12px;
+border-radius:20px;
+font-size:14px;
+}
+
+.arabic-name{
+font-size:42px;
+font-weight:bold;
+color:#064420;
+margin:15px 0 12px;
+font-family:'Amiri', serif;
+line-height:1.4;
+text-align:center;
+}
+
+
+/* =========================
+   Quran Option Cards
+========================= */
+
+.quran-options{
+padding:40px 20px;
+display:flex;
+flex-direction:column;
+gap:20px;
+background:#062b20;
+}
+
+.option-card{
+background:#fff;
+border-radius:18px;
+padding:25px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.option-card:hover{
+transform:translateY(-5px);
+}
+
+.option-card h2{
+color:#064420;
+margin-bottom:10px;
+}
+
+.option-card p{
+color:#666;
+margin-bottom:18px;
+}
+
+.option-card a{
+display:inline-block;
+padding:12px 25px;
+background:#064420;
+color:#FFD700;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.option-card a:hover{
+background:#FFD700;
+color:#064420;
+}
+/* =========================
+   Premium Para Cards
+========================= */
+
+#paraList{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:25px;
+padding:40px 20px;
+background:#062b20;
+}
+
+#paraList .card{
+background:#ffffff;
+border-radius:18px;
+padding:20px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+transition:.3s;
+border:2px solid transparent;
+width:90%;
+max-width:420px;
+}
+
+#paraList .card:hover{
+transform:translateY(-8px);
+border-color:#FFD700;
+box-shadow:0 12px 25px rgba(255,215,0,.3);
+}
+
+#paraList .card h3{
+color:#064420;
+font-size:22px;
+margin-bottom:12px;
+}
+
+#paraList .card p{
+color:#555;
+font-size:16px;
+margin:6px 0;
+}
+
+#paraList .card a{
+display:inline-block;
+margin-top:15px;
+padding:10px 22px;
+background:#064420;
+color:#FFD700;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
+
+#paraList .card a:hover{
+background:#FFD700;
+color:#064420;
+}
+
+/* =========================
+   FINAL QURAN COLORS
+========================= */
+
+/* Quran Page - Para List & Surah List headings */
+.quran-options .option-card h2{
+    color:#064420 !important;
+    font-family:inherit;
+}
+
+/* Surah Arabic Name */
+#surahList .arabic-name{
+    color:#064420 !important;
+    font-family:'Amiri', serif !important;
+    font-size:42px !important;
+    font-weight:bold !important;
+    line-height:1.4 !important;
+    text-align:center;
+}
+
+/* Para Arabic Name */
+#paraList .arabic-name,
+#paraList .para-arabic-name{
+    color:#064420 !important;
+    font-family:'Amiri', serif !important;
+    font-size:42px !important;
+    font-weight:bold !important;
+    line-height:1.4 !important;
+    text-align:center;
+}
+
+
+
+
+
+
