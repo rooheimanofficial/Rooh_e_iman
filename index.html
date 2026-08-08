@@ -1,1 +1,352 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rooh-E-Iman</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="header-top">
+
+<div class="logo">
+
+<img src="IMAGE/Logo.png" alt="Rooh-E-Iman Logo">
+
+<div class="logo-text">
+
+<h2>Rooh-E-Iman</h2>
+
+<p>Islamic Knowledge</p>
+
+</div>
+
+</div>
+
+<div class="menu-bar">
+
+<button id="menuBtn">☰</button>
+
+</div>
+
+</div>
+
+<div id="overlay"></div>
+
+<div id="sideMenu" class="side-menu">
+
+<a href="javascript:void(0)" id="closeBtn">✖</a>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="quran.html">📖 Quran</a>
+
+<a href="#">📜 Hadith</a>
+
+<a href="#">🤲 Duas</a>
+
+<a href="#">📚 Articles</a>
+
+<a href="#">📞 Contact</a>
+
+</div>
+
+</header>
+
+<section class="hero">
+<div class="hero-overlay"></div>
+<h2>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+
+<h1>Welcome to Rooh-e-Iman</h1>
+
+<p>Quran • Hadith • Duas • Islamic Knowledge</p>
+
+<div class="buttons">
+<a href="quran.html">📖 Read Quran</a>
+<a href="#" onclick="alert('Daily Duas page is coming soon!')">🤲 Daily Duas</a>
+</div>
+
+</section>
+
+<section class="slider">
+
+<div class="slides">
+
+<div class="slider-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+<div class="slide active">
+<img src="Image/slide1.jpg" alt="Islamic Image 1">
+</div>
+
+<div class="slide">
+<img src="Image/slide2.jpg" alt="Islamic Image 2">
+</div>
+
+<div class="slide">
+<img src="Image/slide3.jpg" alt="Islamic Image 3">
+</div>
+
+<div class="slide">
+<img src="Image/slide4.jpg" alt="Islamic Image 4">
+</div>
+</div>
+
+</section>
+
+<section class="prayer-times">
+
+<h2 class="section-title">🕌 Prayer Times</h2>
+
+<div class="date-box">
+
+<p id="locationName">📍 Lahore, Pakistan</p>
+
+<p id="todayDate">📅 Loading...</p>
+
+<p id="hijriDate">🌙 Loading...</p>
+
+</div>
+
+<div class="prayer-grid">
+
+<div class="prayer-card" id="cardFajr">
+<h3>Fajr</h3>
+<p id="fajr">--:--</p>
+</div>
+
+<div class="prayer-card" id="cardDhuhr">
+<h3>Dhuhr</h3>
+<p id="dhuhr">--:--</p>
+</div>
+
+<div class="prayer-card" id="cardAsr">
+<h3>Asr</h3>
+<p id="asr">--:--</p>
+</div>
+
+<div class="prayer-card" id="cardMaghrib">
+<h3>Maghrib</h3>
+<p id="maghrib">--:--</p>
+</div>
+
+<div class="prayer-card" id="cardIsha">
+<h3>Isha</h3>
+<p id="isha">--:--</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="daily-ayah">
+
+<h2>🌿 Daily Ayah</h2>
+
+<div class="ayah-icon">📖</div>
+
+<div class="ayah-card">
+
+<h3 id="ayahSurah">Loading...</h3>
+
+<p class="arabic" id="ayahArabic">
+Loading...
+</p>
+
+<p id="ayahTranslation">
+Loading...
+</p>
+
+</div>
+
+</section>
+<section class="daily-hadith">
+
+<h2>📜 Daily Hadith</h2>
+
+<div class="hadith-icon">📜</div>
+
+<div class="hadith-card">
+
+<h3 id="hadithTitle">Loading...</h3>
+
+<p class="hadith-text" id="hadithText">
+Loading...
+</p>
+
+<p class="reference" id="hadithReference">
+Loading...
+</p>
+
+</div>
+
+</section>
+<section class="features">
+
+<h2 class="section-title">🕌 Our Islamic Services</h2>
+
+<div class="card">
+<h3>📖 Holy Quran</h3>
+<p>Read the complete Holy Quran with translations.</p>
+<a href="quran.html">Open →</a>
+</div>
+
+<div class="card">
+<h3>📜 Hadith</h3>
+<p>Authentic Hadith from trusted collections.</p>
+<a href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<h3>🤲 Daily Duas</h3>
+<p>Daily Islamic Duas for every situation.</p>
+<a href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<h3>🕌 Prayer Times</h3>
+<p>Accurate daily prayer timings.</p>
+<a href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<h3>🧭 Qibla Direction</h3>
+<p>Find the Qibla direction easily.</p>
+<a href="#">Coming Soon</a>
+</div>
+
+<div class="card">
+<h3>📚 Islamic Articles</h3>
+<p>Learn Islam through authentic articles.</p>
+<a href="#">Coming Soon</a>
+</div>
+
+</section>
+<section class="latest-videos">
+
+<h2 class="section-title">🎥 Latest Islamic Videos</h2>
+
+<div class="video-grid">
+
+<div class="video-card">
+
+<div class="video-thumb">
+▶
+</div>
+
+<h3>Coming Soon</h3>
+
+<p>Our latest Quran & Islamic videos will appear here.</p>
+
+</div>
+
+<div class="video-card">
+
+<div class="video-thumb">
+▶
+</div>
+
+<h3>Coming Soon</h3>
+
+<p>Beautiful Islamic reminders and short clips.</p>
+
+</div>
+
+<div class="video-card">
+
+<div class="video-thumb">
+▶
+</div>
+
+<h3>Coming Soon</h3>
+
+<p>Watch authentic Islamic knowledge videos.</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="about">
+
+<h2 class="section-title">💚 About Rooh-E-Iman</h2>
+
+<div class="about-box">
+
+<h3>بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h3>
+
+<p>
+
+Rooh-E-Iman is an Islamic platform created to spread the teachings of the Holy Quran and authentic Sunnah.
+
+Our mission is to provide Muslims around the world with easy access to the Quran, Hadith, Duas, Islamic knowledge, and beneficial videos in one beautiful place.
+
+</p>
+
+<p>
+
+May Allah ﷻ accept this effort and make it beneficial for everyone. Ameen.
+
+</p>
+
+</div>
+
+</section>
+<footer class="footer">
+
+<h2>🌿 Rooh-E-Iman</h2>
+
+<p>Quran • Hadith • Duas • Islamic Knowledge</p>
+
+<div class="footer-links">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="quran.html">📖 Quran</a>
+
+<a href="#">📜 Hadith</a>
+
+<a href="#">🤲 Duas</a>
+
+<a href="#">📩 Contact</a>
+
+</div>
+
+<div class="social-links">
+
+<p>📧 rooheiman.official@gmail.com</p>
+
+<p>▶️ YouTube: @Rooh_E_Iman-n5c</p>
+
+<p>🎵 TikTok: @rooh.e_iman</p>
+
+<p>📘 Facebook: Rooh-E-Iman</p>
+
+<p>💻 GitHub: @Rooh-E-Iman</p>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Rooh-E-Iman. All Rights Reserved.
+
+</p>
+
+</footer>
+<script src="script.js"></script>
+<script src="daily-ayah.js"></script>
+<script src="daily-hadith.js"></script>
+
+</body>
+
+</html>
