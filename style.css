@@ -1,0 +1,1243 @@
+body{
+    margin:0;
+    padding:0;
+    background:#0b1f17;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+h1{
+    color:#FFD700;
+    margin-top:50px;
+}
+
+h2{
+    color:#ffffff;
+}
+
+p{
+    color:#dddddd;
+    font-size:18px;
+}
+header{
+    padding:40px 20px;
+}
+
+nav{
+    margin-top:30px;
+}
+
+nav a{
+    color:#FFD700;
+    text-decoration:none;
+    margin:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:white;
+}
+/* ===== Mobile Friendly Header ===== */
+
+/* ===== Premium Header ===== */
+
+header{
+background:#064420;
+padding:8px 15px;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.header-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:45px;
+height:45px;
+border-radius:50%;
+}
+
+.logo h2{
+margin:0;
+font-size:22px;
+color:#FFD700;
+}
+
+.logo p{
+margin:2px 0 0;
+font-size:12px;
+color:#ffffff;
+}
+
+#menuBtn{
+background:transparent;
+border:none;
+color:#ffffff;
+font-size:32px;
+cursor:pointer;
+padding:0;
+}
+
+
+/* Navigation */
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#FFD700;
+}
+
+/* ===== Hero Section ===== */
+
+.hero{
+position:relative;
+background:url("image/hero-bg.jpg") center/cover no-repeat;
+min-height:500px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px 20px;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+}
+
+.hero h2,
+.hero h1,
+.hero p,
+.hero .hero-buttons{
+position:relative;
+z-index:2;
+}
+
+.hero h2{
+color:#FFD700;
+font-size:24px;
+margin-bottom:10px;
+}
+
+.hero h1{
+color:#ffffff;
+font-size:38px;
+margin-bottom:15px;
+}
+
+.hero p{
+color:#f2f2f2;
+font-size:18px;
+margin-bottom:30px;
+}
+
+/* Features Section */
+
+.features{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:60px 20px;
+}
+
+.card{
+    width:260px;
+    background:#0b3d2e;
+    border:2px solid #FFD700;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+
+.card h3{
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#ffffff;
+    line-height:1.6;
+}
+/* Latest Videos */
+
+.latest-videos{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.latest-videos h2{
+    color:#FFD700;
+    margin-bottom:30px;
+    font-size:32px;
+}
+
+.video-box{
+    max-width:700px;
+    margin:auto;
+    background:#0f4d3a;
+    border:2px solid #FFD700;
+    border-radius:15px;
+    padding:30px;
+}
+
+.video-box h3{
+    color:#FFD700;
+}
+
+.video-box p{
+    color:white;
+}
+.footer{
+    background:#0a2d1d;
+    text-align:center;
+    padding:40px 20px;
+    border-top:2px solid gold;
+}
+
+.footer h2{
+    color:gold;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#ddd;
+    margin:8px 0;
+    font-size:16px;
+}
+.features .card a{
+    display:inline-block;
+    margin-top:15px;
+    background:#FFD700;
+    color:#000;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.features .card a:hover{
+    background:white;
+}
+/* Quran Search */
+
+.search-section{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.search-section h2{
+    color:#FFD700;
+    margin-bottom:20px;
+}
+
+#searchInput{
+    width:90%;
+    max-width:500px;
+    padding:15px;
+    border:2px solid #FFD700;
+    border-radius:30px;
+    background:#0f4d3a;
+    color:white;
+    font-size:18px;
+    outline:none;
+}
+
+#searchInput::placeholder{
+    color:#dddddd;
+}
+/* Daily Ayah */
+
+.daily-ayah{
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+.ayah-card{
+
+max-width:800px;
+
+margin:auto;
+
+background:#0b5d4b;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 0 15px rgba(0,0,0,.3);
+
+}
+
+.ayah-card h3{
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+}
+
+.arabic{
+
+font-size:32px;
+
+line-height:2;
+
+direction:rtl;
+
+margin:20px 0;
+
+color:white;
+
+}
+
+.ayah-card p{
+
+color:white;
+
+font-size:18px;
+
+}
+/* Daily Hadith */
+
+.daily-hadith{
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+.hadith-card{
+
+max-width:800px;
+
+margin:auto;
+
+background:#114232;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 0 15px rgba(0,0,0,.3);
+
+}
+
+.hadith-card h3{
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+}
+
+.hadith-text{
+
+font-size:22px;
+
+line-height:1.8;
+
+color:white;
+
+font-style:italic;
+
+}
+
+.reference{
+
+margin-top:20px;
+
+color:#FFD700;
+
+font-weight:bold;
+
+}
+/* Section Title */
+
+.section-title{
+
+text-align:center;
+
+font-size:32px;
+
+color:#FFD700;
+
+margin-bottom:40px;
+
+}
+
+/* Card Button */
+
+.card a{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:10px 20px;
+
+background:#FFD700;
+
+color:#114232;
+
+text-decoration:none;
+
+border-radius:8px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.card a:hover{
+
+background:white;
+
+}
+/* Latest Videos */
+
+.latest-videos{
+
+padding:60px 20px;
+
+}
+
+.video-grid{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.video-card{
+
+width:300px;
+
+background:#114232;
+
+border-radius:15px;
+
+overflow:hidden;
+
+text-align:center;
+
+box-shadow:0 0 15px rgba(0,0,0,.3);
+
+padding-bottom:20px;
+
+}
+
+.video-thumb{
+
+height:180px;
+
+background:#1d6b55;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:60px;
+
+color:#FFD700;
+
+}
+
+.video-card h3{
+
+color:#FFD700;
+
+margin:15px 0;
+
+}
+
+.video-card p{
+
+color:white;
+
+padding:0 15px;
+
+line-height:1.6;
+
+}
+/* About */
+
+.about{
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.about-box{
+
+max-width:900px;
+
+margin:auto;
+
+background:#114232;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:0 0 15px rgba(0,0,0,.3);
+
+}
+
+.about-box h3{
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+font-size:28px;
+
+}
+
+.about-box p{
+
+color:white;
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:15px;
+
+}
+/* Professional Footer */
+
+.footer{
+
+background:#0b3d2e;
+
+padding:50px 20px;
+
+text-align:center;
+
+margin-top:60px;
+
+}
+
+.footer h2{
+
+color:#FFD700;
+
+margin-bottom:15px;
+
+}
+
+.footer p{
+
+color:white;
+
+line-height:1.8;
+
+}
+
+.footer-links{
+
+margin:25px 0;
+
+}
+
+.footer-links a{
+
+color:#FFD700;
+
+text-decoration:none;
+
+margin:10px;
+
+display:inline-block;
+
+font-weight:bold;
+
+}
+
+.footer-links a:hover{
+
+color:white;
+
+}
+
+.social-links{
+
+margin-top:20px;
+
+}
+
+.social-links p{
+
+margin:8px 0;
+
+}
+
+.copyright{
+
+margin-top:25px;
+
+border-top:1px solid rgba(255,255,255,.2);
+
+padding-top:20px;
+
+font-size:15px;
+
+color:#ddd;
+
+}
+/* =========================
+   Side Menu
+========================= */
+
+.menu-bar{
+text-align:right;
+margin-top:10px;
+}
+
+#menuBtn{
+background:#FFD700;
+color:#064420;
+border:none;
+padding:10px 15px;
+font-size:22px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.side-menu{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+right:0;
+background:#064420;
+overflow-x:hidden;
+transition:0.4s;
+padding-top:60px;
+z-index:2000;
+}
+
+.side-menu a{
+display:block;
+padding:15px 25px;
+color:white;
+text-decoration:none;
+font-size:18px;
+transition:.3s;
+}
+
+.side-menu a:hover{
+background:#0B6E4F;
+color:#FFD700;
+}
+
+#closeBtn{
+font-size:28px;
+text-align:right;
+}
+/* ===== Side Menu Premium ===== */
+
+.side-menu{
+
+box-shadow:-5px 0 20px rgba(0,0,0,.45);
+
+}
+
+.side-menu a{
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+font-weight:600;
+
+}
+
+.side-menu a:first-child{
+
+font-size:30px;
+
+text-align:right;
+
+border-bottom:none;
+
+margin-bottom:10px;
+
+}
+
+.side-menu a:hover{
+
+padding-left:35px;
+
+background:#0B6E4F;
+
+color:#FFD700;
+
+transition:.3s;
+
+}
+
+#menuBtn{
+background:transparent;
+color:#ffffff;
+border:none;
+box-shadow:none;
+font-size:34px;
+padding:0;
+width:auto;
+height:auto;
+cursor:pointer;
+transition:.3s;
+}
+
+#menuBtn:hover{
+background:transparent;
+transform:scale(1.08);
+color:#ffffff;
+}
+/* ===== Overlay ===== */
+
+#overlay{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.5);
+
+display:none;
+
+z-index:1500;
+
+}
+
+/* ===== Hero Buttons ===== */
+
+.buttons{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:25px;
+position:relative;
+z-index:2;
+}
+
+.buttons a{
+display:inline-block;
+padding:14px 26px;
+background:#FFD700;
+color:#064420;
+text-decoration:none;
+font-weight:bold;
+font-size:16px;
+border-radius:30px;
+transition:.3s;
+box-shadow:0 4px 12px rgba(0,0,0,.35);
+position:relative;
+z-index:2;
+}
+
+.buttons a:hover{
+background:#ffffff;
+color:#064420;
+transform:translateY(-3px);
+}
+
+.buttons a:last-child{
+background:#0B6E4F;
+color:#ffffff;
+border:2px solid #FFD700;
+}
+
+.buttons a:last-child:hover{
+background:#FFD700;
+color:#064420;
+}
+
+/* ===== Daily Ayah V2 ===== */
+
+.daily-ayah{
+padding:40px 20px;
+text-align:center;
+background:#0b3d2e;
+}
+
+.ayah-icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.ayah-card{
+background:#ffffff;
+color:#222;
+padding:20px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+
+.ayah-card h3{
+color:#064420;
+margin-bottom:15px;
+}
+
+.arabic{
+font-size:28px;
+line-height:2;
+color:#064420;
+margin:20px 0;
+}
+.ayah-card p{
+display:block !important;
+visibility:visible !important;
+opacity:1 !important;
+color:#222 !important;
+font-size:18px !important;
+}
+
+.ayah-card .arabic{
+display:block !important;
+visibility:visible !important;
+opacity:1 !important;
+font-size:30px !important;
+color:#064420 !important;
+line-height:2 !important;
+}
+
+
+/* ===== Daily Hadith V2 ===== */
+
+.daily-hadith{
+padding:40px 20px;
+text-align:center;
+background:#062b20;
+}
+
+.hadith-icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.hadith-card{
+background:#fff;
+color:#222;
+padding:20px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+
+.hadith-card h3{
+color:#064420;
+margin-bottom:15px;
+}
+
+.hadith-text{
+font-size:22px;
+line-height:1.8;
+font-style:italic;
+margin:20px 0;
+}
+
+.reference{
+color:#666;
+font-weight:bold;
+}
+.hadith-card p{
+display:block !important;
+visibility:visible !important;
+opacity:1 !important;
+color:#222 !important;
+font-size:18px !important;
+}
+
+.hadith-card .hadith-text{
+display:block !important;
+visibility:visible !important;
+opacity:1 !important;
+color:#064420 !important;
+font-size:24px !important;
+line-height:1.8 !important;
+font-style:italic;
+margin:20px 0;
+}
+
+.hadith-card .reference{
+display:block !important;
+visibility:visible !important;
+opacity:1 !important;
+color:#666 !important;
+font-size:18px !important;
+font-weight:bold;
+}
+
+
+/* ===== Services V2 ===== */
+
+.features{
+padding:50px 20px;
+background:#083c2d;
+text-align:center;
+}
+
+.section-title{
+font-size:32px;
+color:#FFD700;
+margin-bottom:30px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:#064420;
+margin-bottom:15px;
+}
+
+.card p{
+color:#444;
+line-height:1.6;
+}
+
+.card a{
+display:inline-block;
+margin-top:15px;
+padding:10px 18px;
+background:#064420;
+color:#fff;
+text-decoration:none;
+border-radius:25px;
+font-weight:bold;
+}
+
+.card a:hover{
+background:#FFD700;
+color:#064420;
+}
+
+
+/* ===== Latest Videos V2 ===== */
+
+.latest-videos{
+padding:50px 20px;
+background:#0b3d2e;
+text-align:center;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.video-card{
+background:#ffffff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.video-card:hover{
+transform:translateY(-8px);
+}
+
+.video-thumb{
+height:170px;
+background:#064420;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:60px;
+color:#FFD700;
+}
+
+.video-card h3{
+color:#064420;
+margin:15px 10px;
+}
+
+.video-card p{
+color:#555;
+padding:0 15px 20px;
+line-height:1.6;
+}
+
+
+/* ===== Footer V2 ===== */
+
+.footer{
+background:#041f17;
+padding:50px 20px;
+text-align:center;
+border-top:3px solid #FFD700;
+}
+
+.footer h2{
+color:#FFD700;
+margin-bottom:15px;
+font-size:30px;
+}
+
+.footer p{
+color:#ddd;
+line-height:1.8;
+}
+
+.footer-links{
+margin:25px 0;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.footer-links a{
+color:#fff;
+text-decoration:none;
+padding:8px 16px;
+border-radius:25px;
+transition:.3s;
+}
+
+.footer-links a:hover{
+background:#FFD700;
+color:#064420;
+}
+
+.social-links{
+margin-top:25px;
+}
+
+.social-links p{
+margin:8px 0;
+color:#bbb;
+font-size:15px;
+}
+
+.copyright{
+margin-top:30px;
+font-size:14px;
+color:#888;
+border-top:1px solid rgba(255,255,255,.1);
+padding-top:20px;
+}
+
+
+/* ===== Image Slider ===== */
+
+.slider{
+width:100%;
+max-width:1100px;
+margin:40px auto;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+position:relative;
+}
+
+.slides{
+position:relative;
+width:100%;
+height:250px;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:opacity .8s ease-in-out;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+
+/* ===== Slider Dots ===== */
+
+.slider-dots{
+position:absolute;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:10px;
+z-index:10;
+}
+
+.dot{
+width:12px;
+height:12px;
+border-radius:50%;
+background:rgba(255,255,255,.5);
+cursor:pointer;
+transition:.3s;
+}
+
+.dot.active{
+background:#FFD700;
+transform:scale(1.2);
+}
+
+
+/* ===== Prayer Times ===== */
+
+.prayer-times{
+padding:50px 20px;
+background:#062b20;
+text-align:center;
+}
+
+.prayer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:15px;
+margin-top:25px;
+}
+
+.prayer-card{
+background:#ffffff;
+border-radius:15px;
+padding:20px;
+box-shadow:0 6px 15px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.prayer-card:hover{
+transform:translateY(-5px);
+}
+
+.prayer-card h3{
+color:#064420;
+margin-bottom:10px;
+font-size:20px;
+}
+
+.prayer-card p{
+font-size:24px;
+font-weight:bold;
+color:#FFD700;
+background:#064420;
+padding:10px;
+border-radius:10px;
+}
+
+
+/* ===== Date Box ===== */
+
+.date-box{
+background:#ffffff;
+max-width:600px;
+margin:20px auto 30px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 6px 15px rgba(0,0,0,.25);
+}
+
+.date-box p{
+margin:10px 0;
+font-size:18px;
+font-weight:bold;
+color:#064420;
+}
+
+
+/* ===== Current Prayer ===== */
+
+.prayer-card.active-prayer{
+background:#FFD700;
+border:3px solid #ffffff;
+transform:scale(1.05);
+}
+
+.prayer-card.active-prayer h3{
+color:#064420;
+}
+
+.prayer-card.active-prayer p{
+background:#ffffff;
+color:#064420;
+}
