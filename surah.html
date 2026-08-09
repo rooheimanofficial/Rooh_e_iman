@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran - Rooh-E-Iman</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quran.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rooh-E-Iman</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="header-top">
+
+<div class="logo">
+
+<img src="IMAGE/Logo.png" alt="Rooh-E-Iman Logo">
+
+<div class="logo-text">
+
+<h2>Rooh-E-Iman</h2>
+
+<p>Islamic Knowledge</p>
+
+</div>
+
+</div>
+
+<div class="menu-bar">
+
+<button id="menuBtn">☰</button>
+
+</div>
+
+</div>
+
+<div id="overlay"></div>
+
+<div id="sideMenu" class="side-menu">
+
+<a href="javascript:void(0)" id="closeBtn">✖</a>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="quran.html">📖 Quran</a>
+
+<a href="#">📜 Hadith</a>
+
+<a href="#">🤲 Duas</a>
+
+<a href="#">📚 Articles</a>
+
+<a href="#">📞 Contact</a>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+    <h2>Arabic Text</h2>
+
+    <p id="arabicText" style="font-size:28px; line-height:2;"></p>
+
+    <h2>Urdu Translation</h2>
+
+    <p id="urduTranslation"></p>
+
+</section>
+
+<!-- Load Data -->
+<script src="surahs.js"></script>
+<script src="quran-data.js"></script>
+
+<script>
+constAPI="https://rooh-e-iman-quran-api.rooheiman-official.workers.dev",id=Number(new URLSearchParams(location.search).get("id"));function clean(x){const d=document.createElement("div");d.innerHTML=x||"";return d.textContent||""}async function load(){const s=surahs.find(x=>x.id===id);if(!s){status.textContent="Surah not found.";return}surahName.textContent=s.name;surahArabic.textContent=s.arabic;surahVerses.textContent=s.verses+" Verses";try{const r=await fetch(API+"/surah/"+id);if(!r.ok)throw Error("API "+r.status);const v=(await r.json()).verses||[];quran.innerHTML="";v.forEach(x=>{const c=document.createElement("article");c.className="verse-card";const a=document.createElement("div");a.className="arabic";a.textContent=(x.text_indopak||"")+" ۝ "+(x.verse_number||"");const t=document.createElement("div");t.className="urdu";const u=(x.translations||[]).find(y=>Number(y.resource_id)===97);t.textContent=u?clean(u.text):"Urdu translation not available.";c.append(a,t);quran.append(c)});status.textContent=v.length+" Ayahs loaded — Complete Arabic + Urdu ✓"}catch(e){status.textContent="Quran loading failed: "+e.message}}load();
+
+</script>
+
+</body>
+
+</html>
