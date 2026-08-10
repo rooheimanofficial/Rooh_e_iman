@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Surah - Rooh-E-Iman</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="quran.css">
+<style>
+/* Compact Quran reader: same site header, small hero, then Quran immediately */
+.quran-hero{padding:14px 10px!important;margin:0!important;text-align:center}
+.quran-hero h2{margin:0 0 3px!important;font-size:21px!important}
+.quran-hero h1{margin:2px 0!important;font-size:27px!important}
+.quran-hero p{margin:3px 0!important;font-size:15px!important}
+.reader{max-width:980px;margin:0 auto;padding:8px 10px 45px}
+.reader-title{text-align:center;margin:8px 0 14px}
+.reader-title .arabic-surah-name{
+font-family:"Noto Nastaliq Arabic","Noto Naskh Arabic","Noto Nastaliq Urdu","Jameel Noori Nastaleeq",serif;
+font-size:34px;line-height:1.7;direction:rtl;margin:0
+}
+.reader-title .small-info{font-size:14px;margin:3px 0;color:#555}
+.quran-status{text-align:center;font-size:14px;margin:6px 0 12px}
+.ayah{background:#fff;border-radius:10px;margin:0 0 12px;padding:14px 12px;box-shadow:0 1px 6px rgba(0,0,0,.10)}
+.ayah-arabic{
+font-family:"Noto Nastaliq Arabic","Noto Naskh Arabic","Noto Nastaliq Urdu","Jameel Noori Nastaleeq",serif;
+font-size:31px;line-height:2.35;direction:rtl;text-align:right;color:#111;
+}
+.ayah-number{font-family:Arial,sans-serif;font-size:15px;margin-right:7px;white-space:nowrap}
+.ayah-urdu{
+font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Jameel Noori Nastaleeq",serif;
+font-size:21px;line-height:2.05;direction:rtl;text-align:right;color:#333;
+margin-top:9px;padding-top:9px;border-top:1px solid #e3e3e3
+}
+@media(max-width:600px){
+.reader{padding:6px 7px 35px}
+.reader-title .arabic-surah-name{font-size:31px}
+.ayah{padding:12px 9px}
+.ayah-arabic{font-size:29px;line-height:2.3}
+.ayah-urdu{font-size:20px;line-height:2}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-top">
+<div class="logo">
+<img src="IMAGE/Logo.png" alt="Rooh-E-Iman Logo">
+<div class="logo-text">
+<h2>Rooh-E-Iman</h2>
+<p>Islamic Knowledge</p>
+</div>
+</div>
+<div class="menu-bar"><button id="menuBtn">☰</button></div>
+</div>
+<div id="overlay"></div>
+<div id="sideMenu" class="side-menu">
+<a href="javascript:void(0)" id="closeBtn">✖</a>
+<a href="index.html">🏠 Home</a>
+<a href="quran.html">📖 Quran</a>
+<a href="#">📜 Hadith</a>
+<a href="#">🤲 Duas</a>
+<a href="#">📚 Articles</a>
+<a href="#">📞 Contact</a>
+</div>
+</header>
+
+<section class="hero quran-hero">
+<h2>📖 Holy Quran</h2>
+<h1 id="surahName">Loading...</h1>
+<p id="surahMeta"></p>
+</section>
+
+<main class="reader">
+<section class="reader-title">
+<div id="surahArabic" class="arabic-surah-name"></div>
+<div id="surahInfo" class="small-info"></div>
+</section>
+<div id="quranStatus" class="quran-status">Surah load ho rahi hai...</div>
+<section id="quran"></section>
+</main>
+
+<script src="surahs.js"></script>
+<script>
+const QURAN_API="https://rooh-e-iman-quran-api.rooheiman-official.workers.dev";
+const id=Number(new URLSearchParams(location.search).get("id"));
+
+function stripHtml(value){
+ const d=document.createElement("div");
+ d.innerHTML=value||"";
+ return d.textContent||d.innerText||"";
+}
+
+function getUrdu(v){
+ const list=Array.isArray(v.translations)?v.translations:[];
+ const preferred=list.find(t=>Number(t.resource_id)===97);
+ if(preferred) return stripHtml(preferred.text);
+ const any=list.find(t=>t.text);
+ return any?stripHtml(any.text):"";
+}
+
+async function loadSurah(){
+ const info=Array.isArray(surahs)?surahs.find(s=>Number(s.id)===id):null;
+ if(!info){
+   quranStatus.textContent="Surah nahi mili.";
+   return;
+ }
+ surahName.textContent=info.name;
+ surahArabic.textContent=info.arabic;
+ surahMeta.textContent="Arabic • Urdu Translation";
+ surahInfo.textContent="Para • "+(info.verses||"")+" Ayahs";
+
+ try{
+   const response=await fetch(QURAN_API+"/surah/"+id);
+   if(!response.ok) throw new Error("API "+response.status);
+   const data=await response.json();
+   const verses=Array.isArray(data.verses)?data.verses:[];
+   quran.innerHTML="";
+
+   verses.forEach(v=>{
+     const card=document.createElement("article");
+     card.className="ayah";
+
+     const arabic=document.createElement("div");
+     arabic.className="ayah-arabic";
+     arabic.textContent=(v.text_indopak||v.text||"")+"  ۝ "+(v.verse_number||"");
+
+     const urdu=document.createElement("div");
+     urdu.className="ayah-urdu";
+     urdu.textContent=getUrdu(v)||"Urdu translation available nahi hai.";
+
+     card.append(arabic,urdu);
+     quran.append(card);
+   });
+
+   quranStatus.textContent=verses.length+" Ayahs • Arabic + Urdu ✓";
+ }catch(error){
+   quranStatus.textContent="Quran data load nahi ho saka: "+error.message;
+ }
+}
+loadSurah();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
