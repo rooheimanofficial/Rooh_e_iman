@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quran - Rooh-E-Iman</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="quran.css">
+<style>
+.quran-page-hero{padding:18px 12px!important;margin:0!important;text-align:center}
+.quran-page-hero h2{margin:0 0 4px!important;font-size:22px!important}
+.quran-page-hero h1{margin:3px 0!important;font-size:27px!important}
+.quran-page-hero p{margin:4px 0 0!important;font-size:15px!important}
+.quran-content{max-width:950px;margin:0 auto;padding:12px}
+.quran-search{text-align:center;margin:4px auto 14px}
+.quran-search h2{margin:0 0 8px;font-size:20px}
+.quran-search input{width:min(100%,600px);box-sizing:border-box;padding:12px 15px;border:1px solid #c9dfe3;border-radius:10px;font-size:16px}
+.quran-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:10px}
+.quran-option-card{background:#fff;border-radius:14px;padding:18px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.10)}
+.quran-option-card h2{margin:0 0 7px;font-size:21px}
+.quran-option-card p{margin:0 0 12px;font-size:15px}
+.quran-option-card a{display:inline-block;padding:10px 15px;border-radius:9px;text-decoration:none;font-weight:700}
+@media(max-width:600px){.quran-options{grid-template-columns:1fr}.quran-page-hero h1{font-size:24px!important}}
+</style>
+</head>
+<body>
+<header>
+<div class="header-top">
+<div class="logo">
+<img src="image/logo.png" alt="Rooh-E-Iman logo">
+<div class="logo-text"><h2>Rooh-E-Iman</h2><p>Islamic Knowledge</p></div>
+</div>
+<div class="menu-bar"><button id="menuBtn">☰</button></div>
+</div>
+<div id="overlay"></div>
+<div id="sideMenu" class="side-menu">
+<a href="javascript:void(0)" id="closeBtn">✖</a>
+<a href="index.html">🏠 Home</a>
+<a href="quran.html">📖 Quran</a>
+<a href="#">📜 Hadith</a>
+<a href="#">🤲 Duas</a>
+<a href="#">📚 Articles</a>
+<a href="#">📞 Contact</a>
+</div>
+</header>
+<section class="hero quran-page-hero">
+<h2>📖 Holy Quran</h2>
+<h1>Read the Holy Quran Online</h1>
+<p>Arabic • Urdu Translation • Audio • Tafseer</p>
+</section>
+<main class="quran-content">
+<section class="quran-search">
+<h2>🔍 Search Quran</h2>
+<input type="text" id="quranSearch" placeholder="Search Surah..." autocomplete="off">
+</section>
+<section class="quran-options" id="quranOptions">
+<div class="quran-option-card" data-search="para para list juz قرآن پارہ">
+<h2>📖 Para List</h2><p>Read the Holy Quran by Para</p>
+<a href="paras.html">Open Para List →</a>
+</div>
+<div class="quran-option-card" data-search="surah surah list قرآن سورت">
+<h2>📚 Surah List</h2><p>Read the Holy Quran by Surah</p>
+<a href="surahs.html">Open Surah List →</a>
+</div>
+</section>
+</main>
+<script src="script.js"></script>
+<script>
+const quranSearch=document.getElementById("quranSearch");
+const quranCards=document.querySelectorAll(".quran-option-card");
+quranSearch.addEventListener("input",function(){
+const text=this.value.trim().toLowerCase();
+quranCards.forEach(card=>{
+const value=(card.dataset.search||"").toLowerCase();
+card.style.display=!text||value.includes(text)?"":"none";
+});
+});
+</script>
+</body>
+</html>
